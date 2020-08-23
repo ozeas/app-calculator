@@ -1,1 +1,0 @@
-{"version":3,"file":"index.js","sources":["../lib/components/button/button.tsx"],"sourcesContent":["import React from 'react';\n\nconst Button = ({ children }) => {\n  return <button>{children}</button>;\n};\n\nexport default Button;\n"],"names":["React"],"mappings":";;;;;;;;;;IAEM,MAAM,GAAG,UAAC,EAAY;QAAV,QAAQ,cAAA;IACxB,OAAOA,wDAAS,QAAQ,CAAU,CAAC;AACrC;;;;"}
