@@ -14,7 +14,7 @@ steps:
       - v1-dependencies-
 
   - run: yarn bootstrap
-  - run: yarn compile 
+  - run: yarn compile
 
   - save_cache:
     paths:
