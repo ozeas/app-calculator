@@ -1,0 +1,59 @@
+{
+  "name": "@lib/ui-components",
+  "version": "1.0.0",
+  "description": "united components for applications",
+  "author": "Ozeas Santos <computer.ozeas@gmail.com>",
+  "homepage": "https://github.com/ozeas/app-calculator#readme",
+  "license": "ISC",
+  "main": "dist/index.js",
+  "module": "dist/index.es.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ozeas/app-calculator.git"
+  },
+  "scripts": {
+    "build": "yarn lint && rollup -c",
+    "lint": "yarn eslint . --ext .ts,.tsx",
+    "storybook": "start-storybook -p 6006",
+    "storybook:export": "build-storybook",
+    "test": "jest --passWithNoTests",
+    "test:watch": "jest --watch"
+  },
+  "bugs": {
+    "url": "https://github.com/ozeas/app-calculator/issues"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.11.4",
+    "@rollup/plugin-commonjs": "^15.0.0",
+    "@rollup/plugin-node-resolve": "^9.0.0",
+    "@storybook/react": "^6.0.16",
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^10.4.9",
+    "@types/jest": "^26.0.10",
+    "@types/react": "^16.9.46",
+    "babel-loader": "^8.1.0",
+    "babel-preset-react-app": "^9.1.2",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^24.9.0",
+    "node-sass": "^4.14.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "rollup": "^2.26.5",
+    "rollup-plugin-peer-deps-external": "^2.2.3",
+    "rollup-plugin-postcss": "^3.1.5",
+    "rollup-plugin-typescript2": "^0.27.2",
+    "sass-loader": "^9.0.3",
+    "ts-jest": "^26.2.0",
+    "typescript": "^4.0.2"
+  },
+  "peerDependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  }
+}
