@@ -10,7 +10,7 @@ const App = () => (
         Edit <code>src/App.tsx</code> and save to reload.
       </p>
       <a
-        href="www.globo.com"
+        href="www.react.org"
         className="App-link"
         target="_blank"
         rel="noopener noreferrer"
