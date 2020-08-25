@@ -20,10 +20,10 @@
   "scripts": {
     "build": "yarn lint && rollup -c",
     "lint": "yarn eslint . --ext .ts,.tsx",
-    "storybook": "start-storybook -p 6006",
-    "storybook:export": "build-storybook",
     "test": "jest --passWithNoTests",
-    "test:watch": "jest --watch"
+    "test:watch": "jest --watch",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "bugs": {
     "url": "https://github.com/ozeas/app-calculator/issues"
@@ -32,6 +32,10 @@
     "@babel/core": "^7.11.4",
     "@rollup/plugin-commonjs": "^15.0.0",
     "@rollup/plugin-node-resolve": "^9.0.0",
+    "@storybook/addon-actions": "^6.0.16",
+    "@storybook/addon-controls": "^6.0.17",
+    "@storybook/addon-essentials": "^6.0.16",
+    "@storybook/addon-links": "^6.0.16",
     "@storybook/react": "^6.0.16",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^10.4.9",
@@ -44,6 +48,7 @@
     "node-sass": "^4.14.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-is": "^16.13.1",
     "rollup": "^2.26.5",
     "rollup-plugin-peer-deps-external": "^2.2.3",
     "rollup-plugin-postcss": "^3.1.5",
@@ -55,5 +60,13 @@
   "peerDependencies": {
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
+  },
+  "dependencies": {
+    "@styled-system/prop-types": "^5.1.5",
+    "@styled-system/theme-get": "^5.1.2",
+    "source-sans-pro": "^3.6.0",
+    "styled-components": "^5.1.1",
+    "styled-system": "^5.1.5",
+    "webfontloader": "^1.6.28"
   }
 }
