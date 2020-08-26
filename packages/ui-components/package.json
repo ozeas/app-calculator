@@ -46,7 +46,7 @@
     "@types/styled-system__theme-get": "^5.0.0",
     "babel-loader": "^8.1.0",
     "babel-preset-react-app": "^9.1.2",
-    "husky": "1.0.0-rc.13",
+    "husky": "^4.2.5",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^26.4.2",
     "node-sass": "^4.14.1",
