@@ -48,7 +48,7 @@
     "babel-preset-react-app": "^9.1.2",
     "husky": "^1.0.0-rc.14",
     "identity-obj-proxy": "^3.0.0",
-    "jest": "^26.4.2",
+    "jest": "^24.9.0",
     "node-sass": "^4.14.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
@@ -58,7 +58,7 @@
     "rollup-plugin-postcss": "^3.1.5",
     "rollup-plugin-typescript2": "^0.27.2",
     "sass-loader": "^9.0.3",
-    "ts-jest": "^26.2.0",
+    "ts-jest": "^24.0.0",
     "typescript": "^3.8.0"
   },
   "peerDependencies": {
