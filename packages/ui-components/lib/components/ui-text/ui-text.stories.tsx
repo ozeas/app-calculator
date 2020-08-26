@@ -8,12 +8,12 @@ export default {
   component: UIText,
   argTypes: {
     children: { control: 'text' },
-    backgroundColor: {control: 'color' },
+    backgroundColor: { control: 'color' },
     color: { control: 'color' },
     fontSize: { control: 'text' },
     fontWeight: { control: 'text' },
     fontStyle: { control: 'text' },
-    opacity: { control: 'number' },
+    opacity: { control: 'number' }
   }
 };
 
