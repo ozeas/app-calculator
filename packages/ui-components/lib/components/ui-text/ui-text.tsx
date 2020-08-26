@@ -5,7 +5,8 @@ import { themeGet } from '@styled-system/theme-get';
 
 export type Props = {
   children: ReactNode;
-} & ColorProps & TypographyProps;
+} & ColorProps &
+  TypographyProps;
 
 export type StyledProps = {
   [key: string]: ReactNode;
