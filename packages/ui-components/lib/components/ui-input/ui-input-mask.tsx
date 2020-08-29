@@ -1,13 +1,14 @@
-import React, { FC, ReactNode } from 'react';
+import React, { FC } from 'react';
 import MaskedInput, { MaskedInputProps } from 'react-text-mask';
 import createNumberMask from 'text-mask-addons/dist/createNumberMask';
 
-import { CommonProps } from './shared-props';
+import { InputProps } from './shared-props';
 import { StyledInput, StyledLabel } from './styled';
 
 export type UIInputMaskProps = {
-  type: 'money' | 'percentage' | 'number';
-} & CommonProps &
+  type?: 'money' | 'percentage' | 'number';
+  label: string;
+} & InputProps &
   MaskedInputProps;
 
 const maskTypes = {
@@ -34,7 +35,7 @@ const maskTypes = {
 };
 
 const UIInputMask: FC<UIInputMaskProps> = ({
-  type = 'money',
+  type = 'number',
   error,
   id,
   required,
@@ -45,10 +46,21 @@ const UIInputMask: FC<UIInputMaskProps> = ({
     {...props}
     render={(ref, customProps) => (
       <>
-        <StyledLabel error={error} htmlFor={id} required={required}>
+        <StyledLabel
+          error={error}
+          htmlFor={id}
+          required={required}
+          data-testid="label"
+        >
           {customProps.label}
         </StyledLabel>
-        <StyledInput ref={ref} error={error} id={id} {...customProps} />
+        <StyledInput
+          ref={ref}
+          error={error}
+          id={id}
+          {...customProps}
+          data-testid="input"
+        />
       </>
     )}
   />

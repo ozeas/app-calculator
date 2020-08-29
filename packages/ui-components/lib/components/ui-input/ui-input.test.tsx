@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-import { fireEvent } from '@testing-library/react';
+import React from 'react';
 
 import { renderWithTheme } from '../../../tests/utils';
 
@@ -23,42 +22,6 @@ describe('UIInput', () => {
       expect(inputElement.id).toBe('user_name');
       expect(inputElement.required).toBeFalsy();
       expect(inputElement).toHaveAttribute('width', '251px');
-    });
-
-    it('should set defaultValue to uncontrolled input', () => {
-      const { getByTestId } = renderWithTheme(
-        <UIInput
-          label="Username"
-          id="user_name"
-          defaultValue="Chadwick Boseman"
-        />
-      );
-
-      expect(getByTestId('input').value).toBe('Chadwick Boseman');
-    });
-
-    it('should set value to controlled input', () => {
-      const Component = () => {
-        const [value, setValue] = useState('Chadwick Boseman');
-
-        return (
-          <UIInput
-            label="Username"
-            id="user_name"
-            value={value}
-            onChangeRequest={(e) => setValue(e)}
-          />
-        );
-      };
-      const { getByTestId } = renderWithTheme(<Component />);
-
-      const inputElement = getByTestId('input');
-
-      expect(inputElement.value).toBe('Chadwick Boseman');
-
-      fireEvent.change(inputElement, { target: { value: 'Black Panther' } });
-
-      expect(getByTestId('input').value).toBe('Black Panther');
     });
   });
 

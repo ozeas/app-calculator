@@ -12,7 +12,8 @@ export default {
     name: { control: 'text' },
     required: { control: 'boolean' },
     error: { control: 'boolean' },
-    type: { control: 'text' }
+    type: { control: 'text' },
+    value: { control: 'text' }
   }
 };
 

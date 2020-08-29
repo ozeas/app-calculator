@@ -1,4 +1,5 @@
-import { ReactNode } from 'react';
+import { ReactNode, RefObject } from 'react';
+import MaskedInput from 'react-text-mask';
 
 export type CommonProps = {
   error?: boolean;
@@ -8,7 +9,6 @@ export type CommonProps = {
 export type InputProps = {
   id?: string;
   name?: string;
-  type?: string;
   width?: string | number;
-  ref?: ReactNode;
+  ref?: RefObject<MaskedInput>;
 } & CommonProps;
