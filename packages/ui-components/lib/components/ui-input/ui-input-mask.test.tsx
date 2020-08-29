@@ -26,7 +26,7 @@ describe('UIInputMask', () => {
       const element = getByTestId('input');
       fireEvent.change(element, { target: { value: '1000,30' } });
 
-      expect(getByTestId('input').value).toBe('1.000,30');
+      expect(getByTestId('input').value).toBe('R$ 1.000,30');
     });
 
     it('should render mask percentage', () => {
@@ -37,7 +37,7 @@ describe('UIInputMask', () => {
       const element = getByTestId('input');
       fireEvent.change(element, { target: { value: '100' } });
 
-      expect(element.value).toBe('100');
+      expect(element.value).toBe('100%');
     });
   });
 });
