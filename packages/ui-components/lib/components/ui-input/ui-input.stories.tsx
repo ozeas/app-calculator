@@ -20,8 +20,8 @@ export default {
 
 const Template: Story<UIInputProps> = (args) => <UIInput {...args} />;
 
-export const Default = Template.bind({});
-Default.args = {
+export const BasicUsage = Template.bind({});
+BasicUsage.args = {
   label: 'Informe o valor da venda',
   id: 'valor_venda'
 };
