@@ -1,7 +1,7 @@
 import React from 'react';
 import { Story } from '@storybook/react/types-6-0';
 
-import UIText, { Props } from './ui-text';
+import UIText, { UILabelProps } from './ui-text';
 
 export default {
   title: 'Components/UIText',
@@ -17,7 +17,7 @@ export default {
   }
 };
 
-const Template: Story<Props> = (args) => <UIText {...args} />;
+const Template: Story<UILabelProps> = (args) => <UIText {...args} />;
 
 export const Default = Template.bind({});
 Default.args = { children: 'Default text' };

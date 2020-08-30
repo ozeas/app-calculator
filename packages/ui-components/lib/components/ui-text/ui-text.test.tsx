@@ -14,10 +14,10 @@ describe('UIText', () => {
 
     it('should render default styles', () => {
       const { getByTestId } = renderWithTheme(
-        <UIText data-testid="ui-label">field input</UIText>
+        <UIText data-testid="text">field input</UIText>
       );
 
-      expect(getByTestId('ui-label')).toHaveStyle(
+      expect(getByTestId('text')).toHaveStyle(
         `font-size: 14px; color: #656565;`
       );
     });
@@ -34,12 +34,12 @@ describe('UIText', () => {
       ['fontStyle', 'italic']
     ])('%#: should set custom property %s with %s value', (property, value) => {
       const { getByTestId } = renderWithTheme(
-        <UIText data-testid="ui-label" {...{ [property]: value }}>
+        <UIText data-testid="text" {...{ [property]: value }}>
           field label
         </UIText>
       );
 
-      expect(getByTestId('ui-label')).toHaveStyle(`${property}:${value}`);
+      expect(getByTestId('text')).toHaveStyle(`${property}:${value}`);
     });
   });
 });
