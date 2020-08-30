@@ -3,16 +3,17 @@ import styled from 'styled-components';
 import { color, ColorProps, typography, TypographyProps } from 'styled-system';
 import { themeGet } from '@styled-system/theme-get';
 
-export type Props = {
+type Props = {
   children: ReactNode;
-} & ColorProps &
-  TypographyProps;
-
-export type StyledProps = {
-  [key: string]: ReactNode;
 };
 
-const StyledText = styled.div<StyledProps>`
+export type UILabelProps =
+  | {
+      [key: string]: ColorProps | TypographyProps;
+    }
+  | Props;
+
+const StyledText = styled.div<UILabelProps>`
   display: inline;
   font-size: ${themeGet('fontSizes.1')}px;
   color: ${themeGet('colors.text.2')};
@@ -20,7 +21,7 @@ const StyledText = styled.div<StyledProps>`
   ${typography}
 `;
 
-const UIText: FC<Props> = ({ children, ...props }: Props) => (
+const UIText: FC<UILabelProps> = ({ children, ...props }: UILabelProps) => (
   <StyledText {...props}>{children}</StyledText>
 );
 
