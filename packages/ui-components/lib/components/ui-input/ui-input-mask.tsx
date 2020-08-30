@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { FC, RefObject, ReactNode } from 'react';
 import MaskedInput, { MaskedInputProps } from 'react-text-mask';
 import createNumberMask from 'text-mask-addons/dist/createNumberMask';
 
@@ -8,6 +8,7 @@ import { StyledInput, StyledLabel } from './styled';
 export type UIInputMaskProps = {
   type?: 'money' | 'percentage' | 'number';
   label: string;
+  ref?: RefObject<MaskedInput>;
 } & InputProps &
   MaskedInputProps;
 
@@ -44,7 +45,7 @@ const UIInputMask: FC<UIInputMaskProps> = ({
   <MaskedInput
     mask={maskTypes[type]}
     {...props}
-    render={(ref, customProps) => (
+    render={(ref, customProps): ReactNode => (
       <>
         <StyledLabel
           error={error}

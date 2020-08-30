@@ -1,4 +1,5 @@
 import React from 'react';
+import { fireEvent } from '@testing-library/react';
 
 import { renderWithTheme } from '../../../tests/utils';
 
@@ -57,6 +58,21 @@ describe('UIInput', () => {
       );
 
       expect(getByTestId('input')).toHaveStyle('width: 300px');
+    });
+  });
+
+  describe('call callback', () => {
+    it('should call onChange callback', () => {
+      const onChange = jest.fn();
+
+      const { getByTestId } = renderWithTheme(
+        <UIInput label="Email" id="email" width="300px" onChange={onChange} />
+      );
+      fireEvent.change(getByTestId('input'), {
+        target: { value: 'test@example.com' }
+      });
+
+      expect(onChange).toHaveBeenCalled();
     });
   });
 });

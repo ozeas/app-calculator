@@ -1,5 +1,4 @@
-import { ReactNode, RefObject } from 'react';
-import MaskedInput from 'react-text-mask';
+import { ChangeEvent } from 'react';
 
 export type CommonProps = {
   error?: boolean;
@@ -10,5 +9,5 @@ export type InputProps = {
   id?: string;
   name?: string;
   width?: string | number;
-  ref?: RefObject<MaskedInput>;
+  onChange?: (event: ChangeEvent<HTMLInputElement>) => void;
 } & CommonProps;

@@ -1,4 +1,4 @@
-import React, { FC, ReactNode } from 'react';
+import React, { FC } from 'react';
 
 import { InputProps } from './shared-props';
 import { StyledLabel, StyledInput } from './styled';
@@ -6,7 +6,6 @@ import { StyledLabel, StyledInput } from './styled';
 export type UIInputProps = {
   label: string;
   value?: string;
-  onChange?: (value: string) => void;
 } & InputProps;
 
 const UIInput: FC<UIInputProps> = ({
@@ -14,9 +13,7 @@ const UIInput: FC<UIInputProps> = ({
   error = false,
   label,
   required = false,
-  type = 'text',
   width = '251px',
-  ref,
   onChange,
   ...props
 }: UIInputProps) => {
@@ -31,11 +28,11 @@ const UIInput: FC<UIInputProps> = ({
         {label}
       </StyledLabel>
       <StyledInput
-        type={type}
         error={error}
         id={id}
         required={required}
         width={width}
+        onChange={onChange}
         data-testid="input"
         {...props}
       />
