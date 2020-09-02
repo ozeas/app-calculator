@@ -9,7 +9,7 @@ export default {
   argTypes: {
     children: { control: 'text' },
     backgroundColor: { control: 'color' },
-    color: { control: 'color' },
+    color: { control: 'text' },
     fontSize: { control: 'text' },
     fontWeight: { control: 'text' },
     fontStyle: { control: 'text' },

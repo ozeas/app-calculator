@@ -1,5 +1,5 @@
 {
-  "name": "@lib/ui-components",
+  "name": "@ac/components",
   "version": "1.0.0",
   "description": "united components for applications",
   "author": "Ozeas Santos <computer.ozeas@gmail.com>",
@@ -18,7 +18,7 @@
     "url": "git+https://github.com/ozeas/app-calculator.git"
   },
   "scripts": {
-    "build": "yarn lint && rollup -c",
+    "build": "rollup -c",
     "lint": "yarn eslint . --ext .ts,.tsx",
     "test": "jest --passWithNoTests",
     "test:watch": "jest --watch",
@@ -73,6 +73,7 @@
     "react-text-mask": "^5.4.3",
     "source-sans-pro": "^3.6.0",
     "styled-components": "^5.1.1",
+    "styled-normalize": "^8.0.7",
     "styled-system": "^5.1.5",
     "text-mask-addons": "^3.8.0",
     "webfontloader": "^1.6.28"

@@ -9,6 +9,7 @@ export type UIInputMaskProps = {
   type?: 'money' | 'percentage' | 'number';
   label: string;
   ref?: RefObject<MaskedInput>;
+  [key: string]: any;
 } & InputProps &
   MaskedInputProps;
 

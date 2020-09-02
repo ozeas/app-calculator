@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/explicit-function-return-type */
 import styled, { css } from 'styled-components';
 import { layout } from 'styled-system';
 import { themeGet } from '@styled-system/theme-get';
@@ -21,6 +20,13 @@ const setErrorLabel = ({ error }: StyleLabelProps) =>
   error &&
   css`
     color: ${themeGet('colors.text.4')};
+  `;
+
+const setDisabled = ({ disabled }: StyleInputProps) =>
+  disabled &&
+  css`
+    cursor: not-allowed;
+    background: ${themeGet('colors.general.7')};
   `;
 
 const setErrorInput = ({ error }: StyleInputProps) =>
@@ -61,5 +67,6 @@ export const StyledInput = styled.input<StyleInputProps & CommonProps>`
   }
 
   ${setErrorInput}
+  ${setDisabled}
   ${layout}
 `;

@@ -1,28 +1,30 @@
 import React, { FC, ReactNode } from 'react';
 import styled from 'styled-components';
-import { color, ColorProps, typography, TypographyProps } from 'styled-system';
-import { themeGet } from '@styled-system/theme-get';
+import { color, ColorProps, TypographyProps, typography } from 'styled-system';
 
 type Props = {
   children: ReactNode;
+  [key: string]: ColorProps | TypographyProps | ReactNode;
 };
 
-export type UILabelProps =
-  | {
-      [key: string]: ColorProps | TypographyProps;
-    }
-  | Props;
+export type UILabelProps = Props;
 
 const StyledText = styled.div<UILabelProps>`
   display: inline;
-  font-size: ${themeGet('fontSizes.1')}px;
-  color: ${themeGet('colors.text.2')};
+
   ${color}
   ${typography}
 `;
 
-const UIText: FC<UILabelProps> = ({ children, ...props }: UILabelProps) => (
-  <StyledText {...props}>{children}</StyledText>
+const UIText: FC<UILabelProps> = ({
+  children,
+  fontSize = 1,
+  color = 'text.2',
+  ...props
+}: UILabelProps) => (
+  <StyledText fontSize={fontSize} color={color} {...props}>
+    {children}
+  </StyledText>
 );
 
 export default UIText;
