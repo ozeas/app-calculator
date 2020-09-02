@@ -1,4 +1,3 @@
-import React, { FC, ReactNode } from 'react';
 import styled from 'styled-components';
 import {
   layout,
@@ -6,7 +5,7 @@ import {
   space,
   SpaceProps,
   border,
-  BorderProps,
+  BorderProps
 } from 'styled-system';
 
 type BoxProps = SpaceProps & BorderProps & LayoutProps;

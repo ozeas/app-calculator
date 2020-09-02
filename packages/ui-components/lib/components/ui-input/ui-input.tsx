@@ -1,5 +1,4 @@
 import React, { FC } from 'react';
-import styled, { ThemeProvider } from 'styled-components';
 
 import { InputProps } from './shared-props';
 import { StyledLabel, StyledInput } from './styled';

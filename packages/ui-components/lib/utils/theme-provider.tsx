@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react';
+import React from 'react';
 import { ThemeProvider } from 'styled-components';
 
 import { theme, GlobalStyles } from '../style-tokens';

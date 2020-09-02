@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC } from 'react';
 import styled from 'styled-components';
 import { themeGet } from '@styled-system/theme-get';
 
@@ -56,7 +56,7 @@ const Separator = styled.div`
   opacity: 0.3;
 `;
 
-const CalculatorPage = () => (
+const CalculatorPage: FC = () => (
   <Container>
     <WrapperMain>
       <WrapperForm>
@@ -98,16 +98,24 @@ const CalculatorPage = () => (
         <TitleDetail>você receberá:</TitleDetail>
         <Separator />
         <Box mt="32px">
-          <UIText fontSize={2} color="text.1" fontStyle='italic'>Amanhã: <strong>R$ 0,00</strong></UIText>
+          <UIText fontSize={2} color="text.1" fontStyle="italic">
+            Amanhã: <strong>R$ 0,00</strong>
+          </UIText>
         </Box>
         <Box mt="28px">
-          <UIText fontSize={2} color="text.1" fontStyle='italic'>Em 15 dias: <strong>R$ 0,00</strong></UIText>
+          <UIText fontSize={2} color="text.1" fontStyle="italic">
+            Em 15 dias: <strong>R$ 0,00</strong>
+          </UIText>
         </Box>
         <Box mt="28px">
-          <UIText fontSize={2} color="text.1" fontStyle='italic'>Em 30 dias: <strong>R$ 0,00</strong></UIText>
+          <UIText fontSize={2} color="text.1" fontStyle="italic">
+            Em 30 dias: <strong>R$ 0,00</strong>
+          </UIText>
         </Box>
         <Box mt="28px">
-          <UIText fontSize={2} color="text.1" fontStyle='italic'>Em 90 dias: <strong>R$ 0,00</strong></UIText>
+          <UIText fontSize={2} color="text.1" fontStyle="italic">
+            Em 90 dias: <strong>R$ 0,00</strong>
+          </UIText>
         </Box>
       </WrapperDetail>
     </WrapperMain>
