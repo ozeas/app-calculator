@@ -1,7 +1,6 @@
 import React, { FC, ReactNode } from 'react';
 import styled from 'styled-components';
 import { color, ColorProps, TypographyProps, typography } from 'styled-system';
-import { themeGet } from '@styled-system/theme-get';
 
 type Props = {
   children: ReactNode;
@@ -17,8 +16,15 @@ const StyledText = styled.div<UILabelProps>`
   ${typography}
 `;
 
-const UIText: FC<UILabelProps> = ({ children, fontSize=1, color='text.2', ...props }: UILabelProps) => (
-  <StyledText fontSize={fontSize} color={color} {...props}>{children}</StyledText>
+const UIText: FC<UILabelProps> = ({
+  children,
+  fontSize = 1,
+  color = 'text.2',
+  ...props
+}: UILabelProps) => (
+  <StyledText fontSize={fontSize} color={color} {...props}>
+    {children}
+  </StyledText>
 );
 
 export default UIText;
