@@ -48,7 +48,6 @@ const UIInputMask: FC<UIInputMaskProps> = ({
     {...props}
     render={(ref, customProps): ReactNode => (
       <>
-        {console.log(props)}
         <StyledLabel
           error={error}
           htmlFor={id}
