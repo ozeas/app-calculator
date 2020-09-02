@@ -1,9 +1,13 @@
 import React from 'react';
 
+import { Theme } from '@ac/components';
+
+import CalculatorPage from './src/pages/calculator-page';
+
 const App: React.FC = () => (
-  <div className="App">
-    <header className="App-header"></header>
-  </div>
+  <Theme>
+    <CalculatorPage />
+  </Theme>
 );
 
 export default App;
