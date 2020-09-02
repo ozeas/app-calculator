@@ -6,6 +6,7 @@ export type CommonProps = {
 };
 
 export type InputProps = {
+  disabled?: boolean;
   id?: string;
   name?: string;
   width?: string | number;

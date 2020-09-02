@@ -9,6 +9,7 @@ export type UIInputMaskProps = {
   type?: 'money' | 'percentage' | 'number';
   label: string;
   ref?: RefObject<MaskedInput>;
+  [key: string]: any;
 } & InputProps &
   MaskedInputProps;
 
@@ -47,6 +48,7 @@ const UIInputMask: FC<UIInputMaskProps> = ({
     {...props}
     render={(ref, customProps): ReactNode => (
       <>
+        {console.log(props)}
         <StyledLabel
           error={error}
           htmlFor={id}
