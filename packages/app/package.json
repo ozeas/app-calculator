@@ -11,14 +11,17 @@
     "@types/node": "^12.0.0",
     "@types/react": "^16.9.0",
     "@types/react-dom": "^16.9.0",
+    "axios": "^0.20.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.3",
     "typescript": "~3.7.2"
   },
   "scripts": {
+    "build-sw": "node ./src/sw-build.js",
+    "clean-cra-sw": "rm -f build/precache-manifest.*.js && rm -f build/service-worker.js",
+    "build": "react-scripts build && npm run build-sw && npm run clean-cra-sw",
     "dev": "react-scripts start",
-    "build": "react-scripts build",
     "test": "react-scripts test --passWithNoTests --watchAll=false",
     "test:watch": "react-scripts test",
     "eject": "react-scripts eject"
@@ -34,5 +37,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@testing-library/react-hooks": "^3.4.1",
+    "axios-mock-adapter": "^1.18.2",
+    "react-test-renderer": "^16.13.1"
   }
 }

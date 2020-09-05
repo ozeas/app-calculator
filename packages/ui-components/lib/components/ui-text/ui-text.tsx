@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { color, ColorProps, TypographyProps, typography } from 'styled-system';
 
 type Props = {
-  children: ReactNode;
+  children?: ReactNode;
   [key: string]: ColorProps | TypographyProps | ReactNode;
 };
 
