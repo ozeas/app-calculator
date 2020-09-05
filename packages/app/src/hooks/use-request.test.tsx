@@ -53,6 +53,24 @@ describe('useRequest', () => {
       expect(result.current.isLoading).toBeFalsy();
     });
 
+    it('should return response result', async () => {
+      const resultData = { '30': 13824, '60': 14208, '90': 14400 };
+      axiosMock.onPost('').reply(200, resultData);
+      const { result, waitForNextUpdate } = renderHook(() =>
+        useRequest(payload)
+      );
+
+      expect(result.current.result).toBeNull();
+
+      act(() => {
+        result.current.callRequest();
+      });
+
+      await waitForNextUpdate();
+
+      expect(result.current.result).toEqual(resultData);
+    });
+
     it('should set hasTimeout when response has timeout', async () => {
       axiosMock.onPost('').timeout();
       const { result, waitForNextUpdate } = renderHook(() =>
