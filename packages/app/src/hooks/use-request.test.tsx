@@ -60,7 +60,7 @@ describe('useRequest', () => {
         useRequest(payload)
       );
 
-      expect(result.current.result).toBeFalsy();
+      expect(result.current.result).toBeNull();
 
       act(() => {
         result.current.callRequest();
