@@ -39,7 +39,7 @@ const useRequest = (params = ''): UseRequestTypeReturn => {
   const callRequest = async (
     payload: UseRequestProps
   ): Promise<AxiosResponse | void> => {
-    const checkSlowTime = setTimeout(() => {
+    const checkSlowNetwork = setTimeout(() => {
       setIsSlow(true);
     }, 1500);
 
@@ -58,7 +58,7 @@ const useRequest = (params = ''): UseRequestTypeReturn => {
       setIsLoading(false);
       setIsError(true);
     } finally {
-      clearTimeout(checkSlowTime);
+      clearTimeout(checkSlowNetwork);
     }
   };
 
