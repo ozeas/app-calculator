@@ -16,7 +16,7 @@ describe('useRequest', () => {
 
   describe('default states', () => {
     it('should return correctly initial states', () => {
-      const { result } = renderHook(() => useRequest(payload));
+      const { result } = renderHook(() => useRequest());
 
       expect(result.current.isLoading).toBeFalsy();
       expect(result.current.isError).toBeFalsy();
@@ -37,14 +37,12 @@ describe('useRequest', () => {
 
     it('should toggle isLoading', async () => {
       axiosMock.onPost('').reply(200);
-      const { result, waitForNextUpdate } = renderHook(() =>
-        useRequest(payload)
-      );
+      const { result, waitForNextUpdate } = renderHook(() => useRequest());
 
       expect(result.current.isLoading).toBeFalsy();
 
       act(() => {
-        result.current.callRequest();
+        result.current.callRequest(payload);
       });
       expect(result.current.isLoading).toBeTruthy();
 
@@ -56,14 +54,12 @@ describe('useRequest', () => {
     it('should return response result', async () => {
       const resultData = { '30': 13824, '60': 14208, '90': 14400 };
       axiosMock.onPost('').reply(200, resultData);
-      const { result, waitForNextUpdate } = renderHook(() =>
-        useRequest(payload)
-      );
+      const { result, waitForNextUpdate } = renderHook(() => useRequest());
 
-      expect(result.current.result).toBeNull();
+      expect(result.current.result).toEqual({});
 
       act(() => {
-        result.current.callRequest();
+        result.current.callRequest(payload);
       });
 
       await waitForNextUpdate();
@@ -73,14 +69,12 @@ describe('useRequest', () => {
 
     it('should set hasTimeout when response has timeout', async () => {
       axiosMock.onPost('').timeout();
-      const { result, waitForNextUpdate } = renderHook(() =>
-        useRequest(payload)
-      );
+      const { result, waitForNextUpdate } = renderHook(() => useRequest());
 
       expect(result.current.hasTimeout).toBeFalsy();
 
       act(() => {
-        result.current.callRequest();
+        result.current.callRequest(payload);
       });
 
       await waitForNextUpdate();
@@ -90,14 +84,12 @@ describe('useRequest', () => {
 
     it('should set isError when response has error', async () => {
       axiosMock.onPost('').reply(500);
-      const { result, waitForNextUpdate } = renderHook(() =>
-        useRequest(payload)
-      );
+      const { result, waitForNextUpdate } = renderHook(() => useRequest());
 
       expect(result.current.isError).toBeFalsy();
 
       act(() => {
-        result.current.callRequest();
+        result.current.callRequest(payload);
       });
 
       await waitForNextUpdate();
@@ -111,14 +103,12 @@ describe('useRequest', () => {
       });
       axiosMockDelay.onPost('').reply(200);
 
-      const { result, waitForNextUpdate } = renderHook(() =>
-        useRequest(payload)
-      );
+      const { result, waitForNextUpdate } = renderHook(() => useRequest());
 
       expect(result.current.isSlow).toBeFalsy();
 
       act(() => {
-        result.current.callRequest();
+        result.current.callRequest(payload);
       });
       jest.clearAllTimers();
 

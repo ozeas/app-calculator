@@ -27,7 +27,10 @@ WithMaskMoney.args = {
   id: 'valor_venda',
   name: 'valor_venda',
   value: '1000.33',
-  type: 'money'
+  type: 'money',
+  onChange: (value): void => {
+    console.log(value.target.value);
+  }
 };
 
 export const WithMaskPercent = TemplateMoney.bind({});
@@ -46,4 +49,12 @@ WithMaskNumber.args = {
   name: 'parcelas',
   value: '100',
   type: 'number'
+};
+
+export const WithMaskListDays = TemplateMoney.bind({});
+WithMaskListDays.args = {
+  label: 'Lista de dias',
+  id: 'dias',
+  name: 'dias',
+  value: ''
 };
