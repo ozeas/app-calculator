@@ -69,7 +69,6 @@
     "@styled-system/prop-types": "^5.1.5",
     "@styled-system/theme-get": "^5.1.2",
     "@types/react-text-mask": "^5.4.6",
-    "react-number-format": "^4.4.1",
     "react-text-mask": "^5.4.3",
     "source-sans-pro": "^3.6.0",
     "styled-components": "^5.1.1",
