@@ -18,6 +18,6 @@ export const WrapperMain = styled(Flex).attrs({
   border-radius: ${themeGet('radius')};
   background: ${themeGet('colors.general.4')};
   width: 608px;
-  height: 389px;
+  height: 489px;
   box-sizing: border-box;
 `;

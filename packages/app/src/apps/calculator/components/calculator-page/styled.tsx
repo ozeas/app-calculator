@@ -37,6 +37,12 @@ export const TitleDetail = styled(UIText).attrs({
   margin-bottom: 4px;
 `;
 
+export const OverflowWrapper = styled(Box).attrs({
+  maxHeight: '350px'
+})`
+  overflow-y: auto;
+`;
+
 export const ItemDetail = styled(UIText).attrs({
   fontSize: 2,
   color: 'text.1',

@@ -4,25 +4,26 @@ import axios, { AxiosResponse } from '../api/axios';
 import useRequestStatus from './use-request-status';
 
 type UseRequestProps = {
-  amount: number;
-  installments: number;
-  mdr: number;
+  amount?: number;
+  installments?: number;
+  mdr?: number;
   days?: Array<number>;
 };
 
-type UseRequestTypeReturn = {
-  callRequest: () => Promise<AxiosResponse | void>;
-  result: AxiosResponse | null;
+type ResultType = {
+  [key: string]: number;
+};
+
+export type UseRequestTypeReturn = {
+  callRequest: (payload: UseRequestProps) => Promise<AxiosResponse | void>;
+  result: ResultType;
   isLoading: boolean;
   isError: boolean;
   isSlow: boolean;
   hasTimeout: boolean;
 };
 
-const useRequest = (
-  payload: UseRequestProps,
-  params = ''
-): UseRequestTypeReturn => {
+const useRequest = (params = ''): UseRequestTypeReturn => {
   const {
     isLoading,
     isError,
@@ -33,9 +34,11 @@ const useRequest = (
     setHasTimeout,
     setIsSlow
   } = useRequestStatus();
-  const [result, setResult] = useState<AxiosResponse | null>(null);
+  const [result, setResult] = useState<ResultType>({});
 
-  const callRequest = async (): Promise<AxiosResponse | void> => {
+  const callRequest = async (
+    payload: UseRequestProps
+  ): Promise<AxiosResponse | void> => {
     const checkSlowTime = setTimeout(() => {
       setIsSlow(true);
     }, 1500);
