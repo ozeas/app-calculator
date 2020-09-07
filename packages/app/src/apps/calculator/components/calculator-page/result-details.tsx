@@ -28,7 +28,7 @@ const ResultDetails: FC<Props> = ({ result = {} }: Props) => {
   const { 1: tomorrow, ...othersResults } = processResults;
 
   return (
-    <WrapperDetail>
+    <WrapperDetail data-testid="result-details">
       <TitleDetail>você receberá:</TitleDetail>
       <Separator />
       <OverflowWrapper>
