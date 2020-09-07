@@ -6,6 +6,7 @@ import { StyledLabel, StyledInput } from './styled';
 export type UIInputProps = {
   label: string;
   value?: string;
+  disabled?: boolean;
 } & InputProps;
 
 const UIInput: FC<UIInputProps> = ({

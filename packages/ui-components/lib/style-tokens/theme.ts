@@ -9,7 +9,8 @@ const theme = {
       '#FFFFFF',
       '#66AFE9',
       '#F5F7FA',
-      '#F7F9FA'
+      '#F7F9FA',
+      '#D3D8DF'
     ]
   },
   fontSizes: [11, 14, 16, 24],
