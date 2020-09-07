@@ -1,7 +1,14 @@
 import React, { FC, useState, ChangeEvent, useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 
-import { UIText, UIInputMask, UIInput, Box } from '@ac/components';
+import {
+  UIText,
+  UIInputMask,
+  UIInput,
+  UIButton,
+  Box,
+  Flex
+} from '@ac/components';
 
 import { WrapperForm } from './styled';
 import validate from '../utils/validate';
@@ -33,7 +40,7 @@ type Errors = {
   mdr?: boolean;
 };
 
-const Form: FC<FormProps> = ({ onSubmit, isLoading }: FormProps) => {
+const Form: FC<FormProps> = ({ onSubmit, isLoading = false }: FormProps) => {
   const [errors, setErrors] = useState<Errors>({});
   const { register, setValue, handleSubmit } = useForm<Inputs>();
 
@@ -129,7 +136,11 @@ const Form: FC<FormProps> = ({ onSubmit, isLoading }: FormProps) => {
             </UIText>
           </Box>
         </Box>
-        <button type="submit">Enviar</button>
+        <Flex mt="26px" width="251px" justifyContent="center">
+          <UIButton disabled={isLoading}>
+            {isLoading ? 'Aguarde...' : 'Simular'}
+          </UIButton>
+        </Flex>
       </form>
     </WrapperForm>
   );
