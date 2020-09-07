@@ -15,7 +15,7 @@ const setVariation = ({ variation }): CSSProp =>
     `
   }[variation]);
 
-export const WarningNetwork = styled(Flex).attrs({
+export const Wrapper = styled(Flex).attrs({
   justifyContent: 'center',
   alignItems: 'center'
 })`

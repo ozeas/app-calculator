@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 
-import { WarningNetwork } from './styled';
+import { Wrapper } from './styled';
 
 type Props = {
   message: string;
@@ -8,7 +8,7 @@ type Props = {
 };
 
 const NetworkStatus: FC<Props> = ({ message, variation = 'error' }: Props) => (
-  <WarningNetwork variation={variation}>{message}</WarningNetwork>
+  <Wrapper variation={variation}>{message}</Wrapper>
 );
 
 export default NetworkStatus;

@@ -73,7 +73,7 @@ const Form: FC<FormProps> = ({ onSubmit, isLoading = false }: FormProps) => {
   }, [register]);
 
   return (
-    <WrapperForm>
+    <WrapperForm data-testid="form-calculator">
       <form onSubmit={handleSubmit(prepareSubmit)} noValidate>
         <UIText color="text.2" fontSize={3} fontWeight="bold">
           Simule sua Antecipação
