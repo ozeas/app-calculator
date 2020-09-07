@@ -4,6 +4,13 @@ import { render } from '@testing-library/react';
 import ResultDetails from './result-details';
 
 describe('ResultDetails', () => {
+  const defaultResults = {
+    1: 1000,
+    15: 1100,
+    30: 1200,
+    90: 1300
+  };
+
   describe('initial state', () => {
     it('should render initial state', () => {
       const { getByTestId } = render(<ResultDetails />);
@@ -17,12 +24,6 @@ describe('ResultDetails', () => {
 
   describe('default results', () => {
     it('should render default results', () => {
-      const defaultResults = {
-        1: 1000,
-        15: 1100,
-        30: 1200,
-        90: 1300
-      };
       const { getByTestId } = render(<ResultDetails result={defaultResults} />);
 
       expect(getByTestId('tomorrow').textContent).toMatch('10.00');
@@ -37,7 +38,6 @@ describe('ResultDetails', () => {
         6: 1100,
         9: 1200,
         12: 1300,
-        30: 1400,
         45: 1500
       };
 
@@ -46,7 +46,6 @@ describe('ResultDetails', () => {
         6: '11.00',
         9: '12.00',
         12: '13.00',
-        30: '14.00',
         45: '15.00'
       };
       const { getByTestId, queryByTestId } = render(
@@ -57,6 +56,9 @@ describe('ResultDetails', () => {
         expect(getByTestId(day).textContent).toMatch(value);
       });
       expect(queryByTestId('tomorrow')).toBeNull();
+      expect(queryByTestId('15')).toBeNull();
+      expect(queryByTestId('30')).toBeNull();
+      expect(queryByTestId('90')).toBeNull();
     });
   });
 });
