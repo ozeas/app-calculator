@@ -34,14 +34,14 @@ const ResultDetails: FC<Props> = ({ result = {} }: Props) => {
       <OverflowWrapper>
         {hasTomorrow && (
           <WrapperItemDetail>
-            <ItemDetail>
+            <ItemDetail data-testid="tomorrow">
               Amanhã: <strong>{centsToReal(tomorrow)}</strong>
             </ItemDetail>
           </WrapperItemDetail>
         )}
         {Object.entries(othersResults).map(([day, value]) => (
           <WrapperItemDetail key={day}>
-            <ItemDetail>
+            <ItemDetail data-testid={day}>
               Em {day} dias: <strong>{centsToReal(value)}</strong>
             </ItemDetail>
           </WrapperItemDetail>
