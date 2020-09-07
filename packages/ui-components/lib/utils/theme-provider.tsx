@@ -7,6 +7,7 @@ type Props = {
   children: ReactNode;
 };
 
+// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 const Theme = ({ children }: Props) => (
   <ThemeProvider theme={theme}>
     <GlobalStyles />

@@ -74,16 +74,17 @@ const Form: FC<FormProps> = ({ onSubmit, isLoading = false }: FormProps) => {
 
   return (
     <WrapperForm>
-      <form onSubmit={handleSubmit(prepareSubmit)}>
+      <form onSubmit={handleSubmit(prepareSubmit)} noValidate>
         <UIText color="text.2" fontSize={3} fontWeight="bold">
           Simule sua Antecipação
         </UIText>
         <Box mt="22px">
           <UIInputMask
+            aria-label="sale-value"
             name="amount"
             type="money"
             label="Informe o valor da venda"
-            id="valor_venda"
+            id="sale-value"
             width="251px"
             onChange={handleChanges}
             error={errors?.amount}
@@ -93,6 +94,7 @@ const Form: FC<FormProps> = ({ onSubmit, isLoading = false }: FormProps) => {
         </Box>
         <Box mt="26px">
           <UIInputMask
+            aria-label="installments"
             label="Em quantas parcelas"
             name="installments"
             id="installments"
@@ -110,6 +112,7 @@ const Form: FC<FormProps> = ({ onSubmit, isLoading = false }: FormProps) => {
         </Box>
         <Box mt="26px">
           <UIInputMask
+            aria-label="mdr"
             label="Informe o percentual MDR"
             name="mdr"
             id="mdr"
@@ -123,6 +126,7 @@ const Form: FC<FormProps> = ({ onSubmit, isLoading = false }: FormProps) => {
         </Box>
         <Box mt="26px">
           <UIInput
+            aria-label="days"
             label="Dias a serem calculados"
             name="days"
             id="days"
@@ -137,7 +141,7 @@ const Form: FC<FormProps> = ({ onSubmit, isLoading = false }: FormProps) => {
           </Box>
         </Box>
         <Flex mt="26px" width="251px" justifyContent="center">
-          <UIButton disabled={isLoading}>
+          <UIButton aria-label="submit-button" disabled={isLoading}>
             {isLoading ? 'Aguarde...' : 'Simular'}
           </UIButton>
         </Flex>

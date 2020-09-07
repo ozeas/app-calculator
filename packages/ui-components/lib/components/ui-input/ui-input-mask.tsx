@@ -41,6 +41,7 @@ const UIInputMask: FC<UIInputMaskProps> = ({
   error,
   id,
   required,
+  label,
   ...props
 }: UIInputMaskProps) => (
   <MaskedInput
@@ -54,14 +55,16 @@ const UIInputMask: FC<UIInputMaskProps> = ({
           required={required}
           data-testid="label"
         >
-          {customProps.label}
+          {label}
         </StyledLabel>
         <StyledInput
           ref={ref}
           error={error}
           id={id}
+          required={required}
           {...customProps}
           data-testid="input"
+          aria-invalid={error}
         />
       </>
     )}

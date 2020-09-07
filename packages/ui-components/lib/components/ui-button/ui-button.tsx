@@ -7,6 +7,7 @@ export type UIButtonProps = {
   [key: string]: string | ReactNode;
 };
 
+// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 const setDisabled = ({ disabled }: UIButtonProps) =>
   disabled &&
   css`

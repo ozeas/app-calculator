@@ -1,9 +1,9 @@
-import styled, { css } from 'styled-components';
+import styled, { css, CSSProp } from 'styled-components';
 import { themeGet } from '@styled-system/theme-get';
 
 import { Flex } from '@ac/components';
 
-const setVariation = ({ variation }) =>
+const setVariation = ({ variation }): CSSProp =>
   ({
     error: css`
       background: ${themeGet('colors.text.4')};
