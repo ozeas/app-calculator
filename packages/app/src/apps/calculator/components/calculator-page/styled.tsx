@@ -4,7 +4,7 @@ import { themeGet } from '@styled-system/theme-get';
 import { Box, UIText } from '@ac/components';
 
 export const WrapperForm = styled(Box).attrs({
-  pt: '41px',
+  py: '41px',
   pl: '56px'
 })`
   width: 377px;

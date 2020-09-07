@@ -4,10 +4,10 @@ import { ThemeProvider } from 'styled-components';
 import { theme, GlobalStyles } from '../style-tokens';
 
 type Props = {
-  children?: ReactNode;
+  children: ReactNode;
 };
 
-const Theme = ({ children }: Props): ReactNode => (
+const Theme = ({ children }: Props) => (
   <ThemeProvider theme={theme}>
     <GlobalStyles />
     {children}
