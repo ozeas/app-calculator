@@ -9,11 +9,31 @@ import { Container, WrapperMain } from './styled';
 
 const CalculatorPage: FC = () => {
   const { isOffline } = useOnline();
-  const { callRequest, result, isLoading } = useRequest();
+  const {
+    callRequest,
+    result,
+    isLoading,
+    isSlow,
+    hasTimeout,
+    isError
+  } = useRequest('?delay=3000');
 
   return (
     <Container>
       {isOffline && <NetworkStatus message="Você está offline!" />}
+      {isSlow && (
+        <NetworkStatus
+          variation="warning"
+          message="Sua conexão parece está lenta, a solicitação pode demorar!"
+        />
+      )}
+      {hasTimeout && (
+        <NetworkStatus message="A API não conseguiu responder a tempo, tente novamente!" />
+      )}
+      {isError && (
+        <NetworkStatus message="Houve um erro ao solicitar a simulação, tente novamente!" />
+      )}
+
       <WrapperMain>
         <Form onSubmit={callRequest} isLoading={isLoading} />
         <ResultDetails result={result} />
