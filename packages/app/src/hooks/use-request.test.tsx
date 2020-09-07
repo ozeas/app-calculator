@@ -68,7 +68,7 @@ describe('useRequest', () => {
     });
 
     it('should set hasTimeout when response has timeout', async () => {
-      axiosMock.onPost('').timeout();
+      axiosMock.onPost('').reply(408);
       const { result, waitForNextUpdate } = renderHook(() => useRequest());
 
       expect(result.current.hasTimeout).toBeFalsy();
@@ -97,7 +97,7 @@ describe('useRequest', () => {
       expect(result.current.isError).toBeTruthy();
     });
 
-    it('should set isLow when response delay max 1,5 second', async () => {
+    it('should set isLow when response delay max 1 second', async () => {
       const axiosMockDelay = new MockAdapter(axiosInstance, {
         delayResponse: 2000
       });

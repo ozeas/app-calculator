@@ -41,16 +41,17 @@ const useRequest = (params = ''): UseRequestTypeReturn => {
   ): Promise<AxiosResponse | void> => {
     const checkSlowNetwork = setTimeout(() => {
       setIsSlow(true);
-    }, 1500);
+    }, 1000);
 
     try {
       setIsLoading(true);
+      setHasTimeout(false);
+      setIsError(false);
 
       const { data } = await axios.post(params, payload);
       setResult(data);
-      setIsLoading(false);
     } catch (error) {
-      if (error.message.search('timeout') >= 0) {
+      if (error.message.search('408') >= 0) {
         setHasTimeout(true);
         return;
       }
@@ -59,6 +60,8 @@ const useRequest = (params = ''): UseRequestTypeReturn => {
       setIsError(true);
     } finally {
       clearTimeout(checkSlowNetwork);
+      setIsSlow(false);
+      setIsLoading(false);
     }
   };
 
