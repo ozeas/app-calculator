@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/static/css/main.7f36fcc1.chunk.css",
-    "main.js": "/static/js/main.88ba879a.chunk.js",
-    "main.js.map": "/static/js/main.88ba879a.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.92ee656d.js",
-    "runtime-main.js.map": "/static/js/runtime-main.92ee656d.js.map",
-    "static/js/2.8172f3ef.chunk.js": "/static/js/2.8172f3ef.chunk.js",
-    "static/js/2.8172f3ef.chunk.js.map": "/static/js/2.8172f3ef.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.d24ebcafcc11411130c961c88e470d47.js": "/precache-manifest.d24ebcafcc11411130c961c88e470d47.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/main.7f36fcc1.chunk.css.map": "/static/css/main.7f36fcc1.chunk.css.map",
-    "static/js/2.8172f3ef.chunk.js.LICENSE.txt": "/static/js/2.8172f3ef.chunk.js.LICENSE.txt",
-    "static/js/main.88ba879a.chunk.js.LICENSE.txt": "/static/js/main.88ba879a.chunk.js.LICENSE.txt"
+    "main.css": "/app-calculator/static/css/main.7f36fcc1.chunk.css",
+    "main.js": "/app-calculator/static/js/main.d28ef75a.chunk.js",
+    "main.js.map": "/app-calculator/static/js/main.d28ef75a.chunk.js.map",
+    "runtime-main.js": "/app-calculator/static/js/runtime-main.b157b9df.js",
+    "runtime-main.js.map": "/app-calculator/static/js/runtime-main.b157b9df.js.map",
+    "static/js/2.ea49addc.chunk.js": "/app-calculator/static/js/2.ea49addc.chunk.js",
+    "static/js/2.ea49addc.chunk.js.map": "/app-calculator/static/js/2.ea49addc.chunk.js.map",
+    "index.html": "/app-calculator/index.html",
+    "precache-manifest.4d8ffc993d41b593a258866135d211e3.js": "/app-calculator/precache-manifest.4d8ffc993d41b593a258866135d211e3.js",
+    "service-worker.js": "/app-calculator/service-worker.js",
+    "static/css/main.7f36fcc1.chunk.css.map": "/app-calculator/static/css/main.7f36fcc1.chunk.css.map",
+    "static/js/2.ea49addc.chunk.js.LICENSE.txt": "/app-calculator/static/js/2.ea49addc.chunk.js.LICENSE.txt",
+    "static/js/main.d28ef75a.chunk.js.LICENSE.txt": "/app-calculator/static/js/main.d28ef75a.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.92ee656d.js",
-    "static/js/2.8172f3ef.chunk.js",
+    "static/js/runtime-main.b157b9df.js",
+    "static/js/2.ea49addc.chunk.js",
     "static/css/main.7f36fcc1.chunk.css",
-    "static/js/main.88ba879a.chunk.js"
+    "static/js/main.d28ef75a.chunk.js"
   ]
 }
