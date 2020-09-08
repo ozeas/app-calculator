@@ -15,6 +15,7 @@
     "build": "yarn lerna run build",
     "build:app": "yarn workspace app build",
     "build:components": "yarn workspace @ac/components build",
+    "deploy": "yarn workspace app deploy",
     "dev:app": "yarn build:components && yarn workspace app dev",
     "dev:components": "yarn workspace @ac/components dev",
     "lint": "yarn eslint . --ext .ts,.tsx",
