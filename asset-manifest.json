@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/static/css/main.7f36fcc1.chunk.css",
-    "main.js": "/static/js/main.e2974389.chunk.js",
-    "main.js.map": "/static/js/main.e2974389.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.92ee656d.js",
-    "runtime-main.js.map": "/static/js/runtime-main.92ee656d.js.map",
-    "static/js/2.8172f3ef.chunk.js": "/static/js/2.8172f3ef.chunk.js",
-    "static/js/2.8172f3ef.chunk.js.map": "/static/js/2.8172f3ef.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.ab5a145d7ac4ad549f4f38633960e464.js": "/precache-manifest.ab5a145d7ac4ad549f4f38633960e464.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/main.7f36fcc1.chunk.css.map": "/static/css/main.7f36fcc1.chunk.css.map",
-    "static/js/2.8172f3ef.chunk.js.LICENSE.txt": "/static/js/2.8172f3ef.chunk.js.LICENSE.txt",
-    "static/js/main.e2974389.chunk.js.LICENSE.txt": "/static/js/main.e2974389.chunk.js.LICENSE.txt"
+    "main.css": "/anticipation-calculator-app/static/css/main.7f36fcc1.chunk.css",
+    "main.js": "/anticipation-calculator-app/static/js/main.85005a38.chunk.js",
+    "main.js.map": "/anticipation-calculator-app/static/js/main.85005a38.chunk.js.map",
+    "runtime-main.js": "/anticipation-calculator-app/static/js/runtime-main.0e45a2b5.js",
+    "runtime-main.js.map": "/anticipation-calculator-app/static/js/runtime-main.0e45a2b5.js.map",
+    "static/js/2.15453ec2.chunk.js": "/anticipation-calculator-app/static/js/2.15453ec2.chunk.js",
+    "static/js/2.15453ec2.chunk.js.map": "/anticipation-calculator-app/static/js/2.15453ec2.chunk.js.map",
+    "index.html": "/anticipation-calculator-app/index.html",
+    "precache-manifest.6487af96544c84e13a53b8df42643112.js": "/anticipation-calculator-app/precache-manifest.6487af96544c84e13a53b8df42643112.js",
+    "service-worker.js": "/anticipation-calculator-app/service-worker.js",
+    "static/css/main.7f36fcc1.chunk.css.map": "/anticipation-calculator-app/static/css/main.7f36fcc1.chunk.css.map",
+    "static/js/2.15453ec2.chunk.js.LICENSE.txt": "/anticipation-calculator-app/static/js/2.15453ec2.chunk.js.LICENSE.txt",
+    "static/js/main.85005a38.chunk.js.LICENSE.txt": "/anticipation-calculator-app/static/js/main.85005a38.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.92ee656d.js",
-    "static/js/2.8172f3ef.chunk.js",
+    "static/js/runtime-main.0e45a2b5.js",
+    "static/js/2.15453ec2.chunk.js",
     "static/css/main.7f36fcc1.chunk.css",
-    "static/js/main.e2974389.chunk.js"
+    "static/js/main.85005a38.chunk.js"
   ]
 }
