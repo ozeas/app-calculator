@@ -76,11 +76,11 @@ yarn build:app or yarn build:components
 Este projeto está configurado para publicar o pacote App no github pages
 
 ```shell
-git remove add origin <origin_repo.git>
+git remote add origin <origin_repo.git>
 yarn deploy
 ```
 
-Adiciona as configurações extras no repositório : [Outras configurações do deploy](https://create-react-app.dev/docs/deployment#step-4-for-a-project-page-ensure-your-projects-settings-use-gh-pages "Outras configurações do deploy")
+Adicione as configurações extras no repositório, veja : [Outras configurações do deploy](https://create-react-app.dev/docs/deployment#step-4-for-a-project-page-ensure-your-projects-settings-use-gh-pages "Outras configurações do deploy")
 
 A url de acesso deve ser configurada no `homepage` em `package.json` do pacote:
 
