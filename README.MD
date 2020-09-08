@@ -73,17 +73,22 @@ yarn build:app or yarn build:components
 ```
 
 ### Publicação
-Este projeto está configurado para ser publicado no github pages
+Este projeto está configurado para publicar o pacote App no github pages
 
 ```shell
 git remove add origin <origin_repo.git>
 yarn deploy
 ```
 
-Consulte outras formas de deploy: [Outras formas de deploy](https://create-react-app.dev/docs/deployment "Outras formas de deploy")
+Adiciona as configurações extras no repositório : [Outras configurações do deploy](https://create-react-app.dev/docs/deployment#step-4-for-a-project-page-ensure-your-projects-settings-use-gh-pages "Outras configurações do deploy")
 
+A url de acesso deve ser configurada no `homepage` em `package.json` do pacote:
 
-## Tests
+```
+<username_github>.github.io/<repo_name>
+```
+
+## Testes
 
 Para executar os testes de todos os pacotes:
 ```shell
