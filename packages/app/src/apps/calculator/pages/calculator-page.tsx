@@ -16,7 +16,7 @@ const CalculatorPage: FC = () => {
     isSlow,
     hasTimeout,
     isError
-  } = useRequest('?timeout');
+  } = useRequest();
 
   return (
     <Container>
