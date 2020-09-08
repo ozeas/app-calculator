@@ -2,6 +2,8 @@
 
 Calculadora para simulação de antecipação de transação.
 
+> Publicado em : [https://ozeas.github.io/app-calculator/](https://ozeas.github.io/app-calculator/ "https://ozeas.github.io/app-calculator/")
+
 ## Instalação
 
 O projeto foi construido utilizando o formato monorepo, utilizando tecnologias como Lerna + Yarn Workspace + Yarn para melhor controle entre as dependências internas.
