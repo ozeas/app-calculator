@@ -47,6 +47,8 @@ Principais libs e frameworks utilizados no projeto:
 - react-hook-form@6.7.2
 - rollup@2.26.5
 - @storybook/react@6.0.16
+- styled-components@5.1.1
+- styled-system@5.1.5
 
 
 ### Ambiente de desenvolvimento

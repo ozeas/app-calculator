@@ -37,7 +37,6 @@ const setErrorInput = ({ error }: StyleInputProps) =>
     color: ${themeGet('colors.text.4')};
     &:focus {
       border: 1px solid ${themeGet('colors.text.4')};
-      outline-color: ${themeGet('colors.text.4')};
     }
   `;
 
@@ -64,7 +63,7 @@ export const StyledInput = styled.input<StyleInputProps & CommonProps>`
 
   &:focus {
     border: 1px solid ${themeGet('colors.general.5')};
-    outline-color: ${themeGet('colors.general.5')};
+    outline: none;
   }
 
   ${setErrorInput}
