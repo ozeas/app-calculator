@@ -22,7 +22,7 @@
     "lint": "yarn eslint . --ext .ts,.tsx",
     "test": "jest --passWithNoTests",
     "test:watch": "jest --watch",
-    "storybook": "start-storybook -p 6006",
+    "dev": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
   "bugs": {
