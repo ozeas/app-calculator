@@ -112,6 +112,11 @@ Este projeto faz uso das seguintes ferramentas opinativas de estilo de código:
 - eslint@6.8.0
 - @typescript-eslint/eslint-plugin@3.9.1
 
+Para checar as regras do style guide:
+```shell
+yarn lint
+```
+
 Veja mais em: [Eslint configuration](https://github.com/ozeas/app-calculator/blob/70478495f3ba536205ded2499da5ae486d9443e1/.eslintrc.json#L2 "Eslint configuration")
 
 
