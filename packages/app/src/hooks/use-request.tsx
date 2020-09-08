@@ -1,6 +1,8 @@
 import { useState } from 'react';
 
 import axios, { AxiosResponse } from '../api/axios';
+import { TIMEOUT_CHECK_SLOW_NETWORK } from '../api/constants';
+
 import useRequestStatus from './use-request-status';
 
 type UseRequestProps = {
@@ -41,7 +43,7 @@ const useRequest = (params = ''): UseRequestTypeReturn => {
   ): Promise<AxiosResponse | void> => {
     const checkSlowNetwork = setTimeout(() => {
       setIsSlow(true);
-    }, 1000);
+    }, TIMEOUT_CHECK_SLOW_NETWORK);
 
     try {
       setResult({});
