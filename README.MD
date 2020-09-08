@@ -4,7 +4,7 @@ Calculadora para simulação de antecipação de transação.
 
 ## Instalação
 
-O projeto foi construido utilizando o formato monorepo, utilizando tecnologias como Lerna + Yarn Workspace + Yarn.
+O projeto foi construido utilizando o formato monorepo, utilizando tecnologias como Lerna + Yarn Workspace + Yarn para melhor controle entre as dependências internas.
 
 O projeto é composto de dois subprojetos: [app](https://github.com/ozeas/app-calculator/tree/master/packages/app "app") e [@ac/components](https://github.com/ozeas/app-calculator/tree/master/packages/ui-components "@ac/components") para separação de componentes reutilizáveis e apps gerais.
 

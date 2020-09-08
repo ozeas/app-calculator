@@ -1,11 +1,30 @@
-# `ui-components`
+# @ac/components
 
-> TODO: description
+Pacote de componentes UI e theme.
 
-## Usage
+---
 
+Trata-se de uma lib que centraliza o desenvolvimento de componentes de interface e configurações gerais de de tema.
+
+Desenvolvimento dos componentes é realizado com uso do `storybook` e testes de unidade.
+
+## Desenvolvimento
+
+```shell
+cd app-calculator
+yarn dev:components
 ```
-const uiComponents = require('ui-components');
 
-// TODO: DEMONSTRATE API
+### Testes
+
+```shell
+cd app-calculator
+yarn test:components
+```
+
+### Build
+
+```shell
+cd app-calculator
+yarn build:components
 ```
