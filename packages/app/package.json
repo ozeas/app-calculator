@@ -22,9 +22,7 @@
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "build-sw": "node ./src/sw-build.js",
-    "clean-cra-sw": "rm -f build/precache-manifest.*.js && rm -f build/service-worker.js",
-    "build": "react-scripts build && npm run build-sw && npm run clean-cra-sw",
+    "build": "react-scripts build",
     "dev": "react-scripts start",
     "test": "react-scripts test --passWithNoTests --watchAll=false",
     "test:watch": "react-scripts test",
