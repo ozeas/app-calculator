@@ -28,19 +28,25 @@ describe('NetworkStatus', () => {
     });
 
     it('should show slow network notification', () => {
-      const { queryByText } = render(<NetworkStatus isSlow />);
+      const { queryByText } = render(
+        <NetworkStatus isSlow isOffline={false} />
+      );
 
       expect(queryByText($slow)).toBeInTheDocument();
     });
 
     it('should show request timeout notification', () => {
-      const { queryByText } = render(<NetworkStatus hasTimeout />);
+      const { queryByText } = render(
+        <NetworkStatus hasTimeout isOffline={false} />
+      );
 
       expect(queryByText($timeout)).toBeInTheDocument();
     });
 
     it('should show error notification on response', () => {
-      const { queryByText } = render(<NetworkStatus isError />);
+      const { queryByText } = render(
+        <NetworkStatus isError isOffline={false} />
+      );
 
       expect(queryByText($error)).toBeInTheDocument();
     });
