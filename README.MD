@@ -12,6 +12,7 @@ O projeto é composto de dois subprojetos: [app](https://github.com/ozeas/app-ca
 
 Para correta instalação do projeto é necessário as seguintes ferramentas instaladas:
 
+- lerna >= 3.22.1
 - node >= 12.16.3
 - yarn >= 1.22.4
 - git >= 2.24.1
