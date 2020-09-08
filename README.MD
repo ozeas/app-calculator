@@ -54,6 +54,7 @@ Para configurar o projeto em modo de desenvolvimento, obtenha uma cópia e insta
 ```shell
 git clone git@github.com:ozeas/app-calculator.git
 cd app-calculator/
+yarn
 yarn bootstrap
 yarn dev:app or yarn dev:components
 ```
