@@ -44,6 +44,7 @@ const useRequest = (params = ''): UseRequestTypeReturn => {
     }, 1000);
 
     try {
+      setResult({});
       setIsLoading(true);
       setHasTimeout(false);
       setIsError(false);
